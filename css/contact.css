@@ -1,0 +1,691 @@
+
+
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #FE5D37;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #FFF5F3;
+    --bs-dark: #103741;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
+}
+
+
+
+@font-face {
+    font-family: 'Heebo-Regular' ;
+    src: url(/Assets/fonts/Heebo-Regular.ttf);
+}
+@font-face {
+    font-family:'LobsterTwo-Regular' ;
+    src: url(/Assets/fonts/LobsterTwo-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo-Regular', 'LobsterTwo-Regular','sans-serif';
+}
+body{
+    width: 100%;
+    /* background-color: black; */
+}
+
+h1{
+    font-family: 'LobsterTwo-Regular';
+    font-size: 60px;
+    color:#fff ;
+    padding: 20px 80px;
+}
+h2{
+    font-family: 'LobsterTwo-Regular';
+    font-size: 30px;
+    color:#343a40 ;
+    padding: 20px 80px;
+}
+
+h3{
+    font-family: 'LobsterTwo-Regular';
+    font-size: 45px;
+    color:#343a40 ;
+    padding: 20px 80px;
+}
+
+
+h4{
+    font-family: 'LobsterTwo-Regular';
+    font-size: 20px;
+    color:#343a40 ;
+    padding: 20px 80px;
+
+}
+/* not in use again */
+/* h5{
+    font-family: 'LobsterTwo-Regular';
+    font-size: 30px;
+    color:#fff ;
+    padding: 20px 80px;
+
+} */
+
+
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+
+#navbar li{
+    list-style:  none;
+    padding: 0 25px;
+    align-items: center;
+    
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #103741;
+    white-space: nowrap;
+    font-weight: 60px;
+    transition: 0.5s ease;
+    cursor: pointer;
+   
+    
+    
+}
+#close{
+    display: none;
+}
+#mobile{
+    display: none;
+
+}
+#navbar li a:hover,
+#navbar li a.active{
+   
+    color: #fd7e14;
+  
+    
+}
+#arrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border: 1px solid #fd7e14;
+    background: #fd7e14;
+    border-radius: 20px;
+    width: fit-content;
+    height: 35px;
+   color: #fff;
+    white-space: nowrap;
+    gap: 20px;
+}
+#arrow a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+#info{
+    position: relative;
+}
+.slide1{
+    background-image: url(/Assets/images/carousel-1.jpg);
+    height: 70vh;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+   
+
+
+}
+.slide1 h1{
+    padding-top: 150px;
+}
+
+/* .slide1 p{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 40px;
+    padding: 0 80px;
+    text-align: left;
+} */
+
+.slide1 .about-us ul {
+    display: flex;
+    gap: 10px;
+    color: white;
+    padding: 0 80px;
+    list-style: none;
+}
+.slide1 .about-us ul li a{
+    font-family: 'Heebo-Regular';
+    font-size: 16px;
+    text-decoration: none;
+    color: orangered;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.slide1 .about-us ul li a.active{
+    color: white;
+}
+
+.slide2{
+    display: none;
+}
+
+
+#get-in{
+    text-align: center;
+    margin: 40px 80px;
+}
+#get-in h5{
+    font-family: 'LobsterTwo-Regular';
+    font-size: 40px;
+    color:#343a40 ;
+}
+#get-in p{
+    font-family: 'Heebo-Regular';
+    font-size: 16px;
+    color:#6c757d ;
+}
+#get-in .get-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+#get-in .get-info .icon p{
+    font-size: 20px;
+    font-family: 'Heebo-Regular';
+    color: #343a40;
+    padding-top: 10px;
+}
+#get-in .get-info .icon i{
+    font-size: 20px;
+    font-weight: 800;
+    color: #fd7e14;
+    border: 1px solid red;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    background: #FFF5F3;
+}
+
+/* appointment */
+#appointment{
+   
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.appointment{
+    display: flex;
+    margin: 30px 80px;
+    background: peachpuff;
+    max-width: 1000px;
+    min-height: 10vh;
+    border-radius: 20px;
+   
+}
+
+.image-holder img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    border-radius: 20px;
+   
+}
+
+form{
+    flex-basis: 70%;
+    padding:0 15px;
+}
+.form-group{
+    display: flex;
+    gap: 15px;
+   
+
+}
+.form-group input{
+    width: 100%;
+    height: 60px;
+    margin: 20px 0;
+    border: 1px solid red;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+form input{
+    font-family:  sans-serif;
+    color: darkblue;
+    font-size: 14px;
+
+}
+.form-group input[type="text"],.form-wrapper input[type="text"]{
+    padding-left: 15px;
+}
+.form-group input[type="text"]::placeholder{
+    padding-left: 15px;
+    font-family:  sans-serif;
+    color: darkblue;
+    font-size: 14px;
+}
+.form-wrapper input{
+    width: 100%;
+    height: 70px;
+    margin: 20px 0;
+    border: 1px solid red;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+.form-wrapper input[type="text"]::placeholder{
+    padding-left: 15px;
+    font-family:  sans-serif;
+    color: darkblue;
+    font-size: 14px;
+}
+form button{
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    border: 1px solid red;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: red;
+    
+}
+
+form button a{
+    text-decoration: none;
+    color: white;
+    font-family:  sans-serif;
+    font-size: 14px;
+}
+
+form button:hover{
+    background-color: #6f42c1;
+    color: papayawhip;
+    font-family:  sans-serif;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+
+
+
+/* footer */
+
+footer{
+    background: #103741;
+    margin-top: 50px;
+    width:100%;
+}
+.footer{
+    min-width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    gap: 5px;
+}
+.footer h5{
+    font-family: 'LobsterTwo-Regular';
+    font-size: 20px;
+    color:#fff ;
+    font-weight: bold;
+   padding-top: 40px;
+   padding-bottom: 20px;
+
+
+}
+.footer p{
+    font-family: 'Heebo-Regular';
+    font-size: 16px;
+    color:whitesmoke ;
+   
+}
+footer .album img{
+    width:50%;
+    max-width: 55px;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    border: 2px solid #fff;
+}
+
+.footer .address p{
+    padding: 10px 0px;
+
+}
+.footer .address i{
+    padding-right: 10px;
+}
+.footer .social{
+    color: #fff;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+   padding-right: 5px;
+}
+
+.footer .links p a{
+    font-family: 'Heebo-Regular';
+    font-size: 16px;
+    color:whitesmoke ;
+    text-decoration: none;
+   
+}
+.footer .links .links-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 5px;
+
+    
+}
+.footer .gallery .album{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.footer .newsletter form{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+.footer .newsletter form input{
+width: 100%;
+    height:50px;
+    /* border-radius: 10px; */
+    position: relative;
+}
+.footer .newsletter form .foot-btn{
+position: absolute;
+width: 10%;
+height: 50px;
+
+border: 1px solid red;
+border-radius: 0px;
+border: none;
+outline: none;
+background-color: #fd7e14;
+right: 98px;
+    
+}
+
+.copyright-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px 80px;
+    /* border-top: 1px solid #fff; */
+
+}
+.copyright .border{
+    border-top: 1px solid #fff;
+    width:calc(100% - 160px);
+    margin: 0 auto;
+}
+.copyright-content .others ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+    
+}
+.copyright-content .others ul li{
+    list-style-type: none;
+}
+
+
+/* start media query */
+@media (max-width:799px) {
+   
+    #header {
+        width: 100%;
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        padding: 20px 20px;
+      
+        
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       justify-content: flex-start;
+       position: fixed;
+       top: 0;
+       right: -350px;
+       height: 100vh;
+       width: 150px;
+       background-color: #E3E6F3;
+       box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
+       padding: 40px 10px 0 10px;
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #arrow {
+        display: none;
+       
+    }
+    #navbar li{
+        margin-bottom: 20px;
+    }
+    #mobile{
+        display: block;
+       
+      
+
+    }
+    #mobile i{
+        color: var(--bs-orange);
+        font-size: 20px;
+    }
+    #close{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        color: red;
+        font-size: 24px;
+
+    }
+    .slide1 {
+        background-image: url(/Assets/images/carousel-2.jpg);
+        height: 30vh;
+        width: 100%;
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+  
+    }
+    h1 {
+        font-family: 'LobsterTwo-Regular';
+        font-size: 40px;
+        color: #fff;
+        padding: 20px 80px;
+    }
+    .slide1 h1 {
+        width: 70%;
+        padding-top: 100px;
+       
+    }
+   
+   
+    
+    #get-in .get-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+    #get-in .get-info .icon p {
+      
+        white-space: nowrap;
+    }
+   
+    
+    .appointment {
+        display: flex;
+        flex-direction: column;
+      
+    }
+    h3 {
+      
+        text-align: center;
+    }
+   
+.footer {
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+   
+ 
+}
+.footer .newsletter form .foot-btn {
+    position: absolute;
+    width: 20%;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    background-color: #fd7e14;
+    right: 255px;
+}
+}
+
+@media (max-width:477px){
+    #header {
+      
+        max-width: 100%px;
+        
+    }
+    .slide1 h1 {
+        width: 100%;
+      white-space: nowrap;
+      font-size: 25px;
+      text-align: center;
+    }
+    .slide1 p {
+        color: white;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 10px;
+        padding: 0 15px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    #get-in .get-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+ 
+    #appointment {
+        padding: 10px 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .image-holder img {
+        display: block;
+        width: 350px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+       
+    }
+   
+ 
+    .footer .gallery .album {
+        gap: 5px;
+      
+    }
+    .footer .newsletter form .foot-btn {
+        width: 30%;
+        right: 30px;
+    }
+    .copyright .border {
+  
+        width: calc(100% - 30px);
+     
+    }
+    .copyright-content {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+      
+    }
+}
